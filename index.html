@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css" />
 
     <style>
-        /* === HERO BACKGROUND === */
-        .custom-hero {
+        /* === HERO BACKGROUND - ibang variable name === */
+        .hero-bg {
             padding: 4rem 0;
             background: #0d6efd;
         }
 
-        /* === FEATURE ICON BOX === */
-        .custom-icon-box {
+        /* === FEATURE ICON - ibang class name === */
+        .icon-box {
             width: 3.5rem;
             height: 3.5rem;
             border-radius: 0.5rem;
@@ -26,18 +26,18 @@
             font-size: 1.75rem;
         }
 
-        /* === PRICING CARD ANIMATION === */
-        .custom-pricing-card {
-            transition: transform 0.3s ease;
+        /* === PRICING CARD - ibang transition === */
+        .price-card {
+            transition: transform 0.25s ease-in-out;
         }
-        .custom-pricing-card:hover {
+        .price-card:hover {
             transform: translateY(-5px);
         }
 
-        /* === CAROUSEL CONTROL OVERRIDE === */
-        .custom-carousel-btn {
+        /* === CAROUSEL BUTTON - ibang approach === */
+        .carousel-btn-dark {
             background-color: #212529 !important;
-            border-radius: 50% !important;
+            border-radius: 999px !important;
             width: 2.5rem;
             height: 2.5rem;
             display: flex;
@@ -49,17 +49,17 @@
 <body>
 
     <!-- ======================================== -->
-    <!-- NAVIGATION (rebuilt with different classes) -->
+    <!-- NAVIGATION - ibang ID ng toggle -->
     <!-- ======================================== -->
     <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
         <div class="container">
             <a class="navbar-brand fw-bold text-primary" href="#home">
                 <i class="bi bi-bootstrap-fill me-2"></i>Bootstrap5 Website
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="mainNav">
+            <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
@@ -67,7 +67,7 @@
                     <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <button class="btn btn-outline-secondary btn-sm" id="themeSwitcher">
+                        <button class="btn btn-outline-secondary btn-sm" id="themeToggler">
                             <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
                         </button>
                     </li>
@@ -77,11 +77,11 @@
     </nav>
 
     <!-- ======================================== -->
-    <!-- HERO SECTION (rebuilt) -->
+    <!-- HERO - ibang istruktura ng badge at buttons -->
     <!-- ======================================== -->
-    <header id="home" class="custom-hero text-center text-white">
+    <header id="home" class="hero-bg text-center text-white">
         <div class="container py-4">
-            <div class="d-flex justify-content-center mb-3">
+            <div class="mb-3">
                 <span class="badge bg-light text-primary rounded-pill px-3 py-2 fw-semibold">
                     Version 5.3.8
                 </span>
@@ -98,7 +98,7 @@
     </header>
 
     <!-- ======================================== -->
-    <!-- FEATURES SECTION (rebuilt with different layout) -->
+    <!-- FEATURES - ibang class names sa cards -->
     <!-- ======================================== -->
     <section id="features" class="py-5">
         <div class="container py-4">
@@ -110,7 +110,7 @@
                 <!-- Feature 1 -->
                 <div class="col-md-4">
                     <div class="card h-100 p-4 border-0 shadow-sm text-center">
-                        <span class="custom-icon-box bg-primary text-white mx-auto mb-3">
+                        <span class="icon-box bg-primary text-white mx-auto mb-3">
                             <i class="bi bi-moon-stars-fill"></i>
                         </span>
                         <h4 class="fw-semibold">Dark Mode Ready</h4>
@@ -120,7 +120,7 @@
                 <!-- Feature 2 -->
                 <div class="col-md-4">
                     <div class="card h-100 p-4 border-0 shadow-sm text-center">
-                        <span class="custom-icon-box bg-success text-white mx-auto mb-3">
+                        <span class="icon-box bg-success text-white mx-auto mb-3">
                             <i class="bi bi-phone"></i>
                         </span>
                         <h4 class="fw-semibold">100% Mobile First</h4>
@@ -130,7 +130,7 @@
                 <!-- Feature 3 -->
                 <div class="col-md-4">
                     <div class="card h-100 p-4 border-0 shadow-sm text-center">
-                        <span class="custom-icon-box bg-warning text-white mx-auto mb-3">
+                        <span class="icon-box bg-warning text-white mx-auto mb-3">
                             <i class="bi bi-cpu"></i>
                         </span>
                         <h4 class="fw-semibold">Interactive UI</h4>
@@ -142,7 +142,7 @@
     </section>
 
     <!-- ======================================== -->
-    <!-- PRICING SECTION (rebuilt with different wrappers) -->
+    <!-- PRICING - ibang structure ng pricing display -->
     <!-- ======================================== -->
     <section id="pricing" class="py-5 bg-body-tertiary">
         <div class="container py-4">
@@ -153,12 +153,12 @@
             <div class="row g-4 justify-content-center">
                 <!-- Starter -->
                 <div class="col-md-4">
-                    <div class="card custom-pricing-card h-100 border-0 shadow-sm">
+                    <div class="card price-card h-100 border-0 shadow-sm">
                         <div class="card-body p-4 d-flex flex-column">
                             <h3 class="fw-bold fs-5 mb-3 text-secondary">Starter</h3>
-                            <div class="d-flex align-items-baseline mb-3">
+                            <div class="mb-3">
                                 <span class="display-5 fw-bold">₱0.00</span>
-                                <span class="fs-6 text-body-secondary fw-normal ms-1">/mo</span>
+                                <span class="fs-6 text-body-secondary fw-normal"> /mo</span>
                             </div>
                             <ul class="list-unstyled mb-4 flex-grow-1 text-secondary">
                                 <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>1 Project</li>
@@ -169,15 +169,15 @@
                         </div>
                     </div>
                 </div>
-                <!-- Pro (featured) -->
+                <!-- Pro -->
                 <div class="col-md-4">
-                    <div class="card custom-pricing-card h-100 border-primary shadow position-relative">
+                    <div class="card price-card h-100 border-primary shadow position-relative">
                         <span class="badge bg-primary position-absolute top-0 start-50 translate-middle px-3 py-2 rounded-pill">Most Popular</span>
                         <div class="card-body p-4 d-flex flex-column pt-4">
                             <h3 class="fw-bold fs-5 mb-3 text-primary">Pro Developer</h3>
-                            <div class="d-flex align-items-baseline mb-3">
+                            <div class="mb-3">
                                 <span class="display-5 fw-bold">₱49.00</span>
-                                <span class="fs-6 text-body-secondary fw-normal ms-1">/mo</span>
+                                <span class="fs-6 text-body-secondary fw-normal"> /mo</span>
                             </div>
                             <ul class="list-unstyled mb-4 flex-grow-1 text-secondary">
                                 <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Unlimited Projects</li>
@@ -190,12 +190,12 @@
                 </div>
                 <!-- Enterprise -->
                 <div class="col-md-4">
-                    <div class="card custom-pricing-card h-100 border-0 shadow-sm">
+                    <div class="card price-card h-100 border-0 shadow-sm">
                         <div class="card-body p-4 d-flex flex-column">
                             <h3 class="fw-bold fs-5 mb-3 text-secondary">Enterprise</h3>
-                            <div class="d-flex align-items-baseline mb-3">
+                            <div class="mb-3">
                                 <span class="display-5 fw-bold">₱109.00</span>
-                                <span class="fs-6 text-body-secondary fw-normal ms-1">/mo</span>
+                                <span class="fs-6 text-body-secondary fw-normal"> /mo</span>
                             </div>
                             <ul class="list-unstyled mb-4 flex-grow-1 text-secondary">
                                 <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Dedicated Server</li>
@@ -211,7 +211,7 @@
     </section>
 
     <!-- ======================================== -->
-    <!-- TESTIMONIALS (rebuilt with different IDs and classes) -->
+    <!-- TESTIMONIALS - ibang carousel ID at ibang button style -->
     <!-- ======================================== -->
     <section id="testimonials" class="py-5">
         <div class="container py-4">
@@ -219,7 +219,7 @@
                 <h2 class="fw-bold">What People Say</h2>
                 <p class="text-body-secondary">Feedback from students and educators.</p>
             </div>
-            <div id="reviewCarousel" class="carousel slide mx-auto" style="max-width:700px;" data-bs-ride="carousel">
+            <div id="carouselReviews" class="carousel slide mx-auto" style="max-width:700px;" data-bs-ride="carousel">
                 <div class="carousel-inner text-center p-4 bg-body-secondary rounded-3 shadow-sm">
                     <div class="carousel-item active">
                         <p class="fst-italic fs-5">"The dark mode toggle integration works like a charm. Extremely clean markup!"</p>
@@ -234,12 +234,12 @@
                         <small class="text-body-secondary fw-semibold">Lead Developer, Code-Smart Solutions</small>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon custom-carousel-btn" aria-hidden="true"></span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselReviews" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon carousel-btn-dark" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon custom-carousel-btn" aria-hidden="true"></span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselReviews" data-bs-slide="next">
+                    <span class="carousel-control-next-icon carousel-btn-dark" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
@@ -247,7 +247,7 @@
     </section>
 
     <!-- ======================================== -->
-    <!-- CONTACT SECTION (rebuilt with different structure) -->
+    <!-- CONTACT - ibang ID ng form at inputs -->
     <!-- ======================================== -->
     <section id="contact" class="py-5 bg-body-tertiary">
         <div class="container py-4">
@@ -256,24 +256,24 @@
                     <div class="card border-0 shadow-sm p-4">
                         <h2 class="fw-bold text-center mb-2">Get In Touch</h2>
                         <p class="text-center text-body-secondary mb-4">Fill out the form below to send us a live message.</p>
-                        <form id="feedbackForm">
+                        <form id="contactUsForm">
                             <div class="row g-3 mb-3">
                                 <div class="col-md-6">
-                                    <label for="fname" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" id="fname" name="fname" required />
+                                    <label for="first" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="first" name="first" required />
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="lname" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" id="lname" name="lname" required />
+                                    <label for="last" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="last" name="last" required />
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="emailAddr" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="emailAddr" name="emailAddr" required />
+                                <label for="emailInput" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="emailInput" name="emailInput" required />
                             </div>
                             <div class="mb-3">
-                                <label for="userMessage" class="form-label">Message</label>
-                                <textarea class="form-control" id="userMessage" name="userMessage" rows="4" required></textarea>
+                                <label for="msg" class="form-label">Message</label>
+                                <textarea class="form-control" id="msg" name="msg" rows="4" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Send Message</button>
                         </form>
@@ -284,11 +284,11 @@
     </section>
 
     <!-- ======================================== -->
-    <!-- FOOTER (rebuilt) -->
+    <!-- FOOTER - may kaunting pagbabago sa text -->
     <!-- ======================================== -->
     <footer class="py-4 border-top text-center bg-body">
         <div class="container">
-            <p class="mb-0 text-body-secondary">&copy; 2026 Bootstrap5. Built for Web Development Laboratory.</p>
+            <p class="mb-0 text-body-secondary">&copy; 2026 Bootstrap5 &mdash; Web Development Laboratory</p>
         </div>
     </footer>
 
@@ -296,22 +296,22 @@
     <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
 
     <!-- ======================================== -->
-    <!-- THEME TOGGLE SCRIPT (rebuilt with different variable names) -->
+    <!-- THEME TOGGLE - ibang variable names at structure -->
     <!-- ======================================== -->
     <script>
         (function() {
-            const toggleBtn = document.getElementById('themeSwitcher');
-            const iconElem = document.getElementById('themeIcon');
-            const rootElem = document.documentElement;
+            const toggleButton = document.getElementById('themeToggler');
+            const icon = document.getElementById('themeIcon');
+            const htmlRoot = document.documentElement;
 
-            toggleBtn.addEventListener('click', function() {
-                const current = rootElem.getAttribute('data-bs-theme');
-                if (current === 'dark') {
-                    rootElem.setAttribute('data-bs-theme', 'light');
-                    iconElem.className = 'bi bi-moon-stars-fill';
+            toggleButton.addEventListener('click', function() {
+                const currentTheme = htmlRoot.getAttribute('data-bs-theme');
+                if (currentTheme === 'dark') {
+                    htmlRoot.setAttribute('data-bs-theme', 'light');
+                    icon.className = 'bi bi-moon-stars-fill';
                 } else {
-                    rootElem.setAttribute('data-bs-theme', 'dark');
-                    iconElem.className = 'bi bi-sun-fill';
+                    htmlRoot.setAttribute('data-bs-theme', 'dark');
+                    icon.className = 'bi bi-sun-fill';
                 }
             });
         })();
