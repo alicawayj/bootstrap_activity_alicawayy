@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bootstrap 5 - Modern Web Design</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css" />
+
+    <style>
+        /* === HERO BACKGROUND === */
+        .custom-hero {
+            padding: 4rem 0;
+            background: #0d6efd;
+        }
+
+        /* === FEATURE ICON BOX === */
+        .custom-icon-box {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 0.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+        }
+
+        /* === PRICING CARD ANIMATION === */
+        .custom-pricing-card {
+            transition: transform 0.3s ease;
+        }
+        .custom-pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* === CAROUSEL CONTROL OVERRIDE === */
+        .custom-carousel-btn {
+            background-color: #212529 !important;
+            border-radius: 50% !important;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ======================================== -->
+    <!-- NAVIGATION (rebuilt with different classes) -->
+    <!-- ======================================== -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#home">
+                <i class="bi bi-bootstrap-fill me-2"></i>Bootstrap5 Website
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button class="btn btn-outline-secondary btn-sm" id="themeSwitcher">
+                            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================================== -->
+    <!-- HERO SECTION (rebuilt) -->
+    <!-- ======================================== -->
+    <header id="home" class="custom-hero text-center text-white">
+        <div class="container py-4">
+            <div class="d-flex justify-content-center mb-3">
+                <span class="badge bg-light text-primary rounded-pill px-3 py-2 fw-semibold">
+                    Version 5.3.8
+                </span>
+            </div>
+            <h1 class="display-4 fw-bold mb-3">Build fast, responsive sites with Bootstrap</h1>
+            <p class="lead text-white-50 mx-auto mb-4" style="max-width:750px;">
+                Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="#pricing" class="btn btn-light text-primary fw-semibold btn-lg px-4">Get Started</a>
+                <a href="#features" class="btn btn-outline-light btn-lg px-4">Download Bootstrap 5.3.8</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======================================== -->
+    <!-- FEATURES SECTION (rebuilt with different layout) -->
+    <!-- ======================================== -->
+    <section id="features" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Powerful Features</h2>
+                <p class="text-body-secondary">Designed to give you full control over your layout and functionality.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Feature 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 border-0 shadow-sm text-center">
+                        <span class="custom-icon-box bg-primary text-white mx-auto mb-3">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </span>
+                        <h4 class="fw-semibold">Dark Mode Ready</h4>
+                        <p class="text-body-secondary">Built-in theme switcher using Bootstrap 5's native data-bs-theme attribute.</p>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 border-0 shadow-sm text-center">
+                        <span class="custom-icon-box bg-success text-white mx-auto mb-3">
+                            <i class="bi bi-phone"></i>
+                        </span>
+                        <h4 class="fw-semibold">100% Mobile First</h4>
+                        <p class="text-body-secondary">Fully fluid layout engineered to scale down seamlessly to mobile screens.</p>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 border-0 shadow-sm text-center">
+                        <span class="custom-icon-box bg-warning text-white mx-auto mb-3">
+                            <i class="bi bi-cpu"></i>
+                        </span>
+                        <h4 class="fw-semibold">Interactive UI</h4>
+                        <p class="text-body-secondary">Includes dynamic feedback toasts, sliders, and form validation logic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- PRICING SECTION (rebuilt with different wrappers) -->
+    <!-- ======================================== -->
+    <section id="pricing" class="py-5 bg-body-tertiary">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold fs-1">Flexible Pricing</h2>
+                <p class="text-body-secondary">Choose the plan that fits your business needs.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Starter -->
+                <div class="col-md-4">
+                    <div class="card custom-pricing-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h3 class="fw-bold fs-5 mb-3 text-secondary">Starter</h3>
+                            <div class="d-flex align-items-baseline mb-3">
+                                <span class="display-5 fw-bold">₱0.00</span>
+                                <span class="fs-6 text-body-secondary fw-normal ms-1">/mo</span>
+                            </div>
+                            <ul class="list-unstyled mb-4 flex-grow-1 text-secondary">
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>1 Project</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Community Support</li>
+                                <li class="mb-2 text-body-secondary"><i class="bi bi-x me-2"></i>Custom Domain</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100">Sign Up Free</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pro (featured) -->
+                <div class="col-md-4">
+                    <div class="card custom-pricing-card h-100 border-primary shadow position-relative">
+                        <span class="badge bg-primary position-absolute top-0 start-50 translate-middle px-3 py-2 rounded-pill">Most Popular</span>
+                        <div class="card-body p-4 d-flex flex-column pt-4">
+                            <h3 class="fw-bold fs-5 mb-3 text-primary">Pro Developer</h3>
+                            <div class="d-flex align-items-baseline mb-3">
+                                <span class="display-5 fw-bold">₱49.00</span>
+                                <span class="fs-6 text-body-secondary fw-normal ms-1">/mo</span>
+                            </div>
+                            <ul class="list-unstyled mb-4 flex-grow-1 text-secondary">
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Unlimited Projects</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Priority Support</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Custom Domain</li>
+                            </ul>
+                            <button class="btn btn-primary w-100 fw-semibold">Get Started Pro</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Enterprise -->
+                <div class="col-md-4">
+                    <div class="card custom-pricing-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h3 class="fw-bold fs-5 mb-3 text-secondary">Enterprise</h3>
+                            <div class="d-flex align-items-baseline mb-3">
+                                <span class="display-5 fw-bold">₱109.00</span>
+                                <span class="fs-6 text-body-secondary fw-normal ms-1">/mo</span>
+                            </div>
+                            <ul class="list-unstyled mb-4 flex-grow-1 text-secondary">
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Dedicated Server</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>24/7 Phone Support</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>SLA Guarantee</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100">Contact Sales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- TESTIMONIALS (rebuilt with different IDs and classes) -->
+    <!-- ======================================== -->
+    <section id="testimonials" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">What People Say</h2>
+                <p class="text-body-secondary">Feedback from students and educators.</p>
+            </div>
+            <div id="reviewCarousel" class="carousel slide mx-auto" style="max-width:700px;" data-bs-ride="carousel">
+                <div class="carousel-inner text-center p-4 bg-body-secondary rounded-3 shadow-sm">
+                    <div class="carousel-item active">
+                        <p class="fst-italic fs-5">"The dark mode toggle integration works like a charm. Extremely clean markup!"</p>
+                        <h5 class="fw-bold mb-0">Harrold Evangelista</h5>
+                        <small class="text-body-secondary d-block">BSIT-Business Analytics Track</small>
+                        <small class="text-body-secondary fw-semibold">UI/UX Designer</small>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="fst-italic fs-5">"This Bootstrap starter layout completely sped up my client workflow. Highly recommended!"</p>
+                        <h5 class="fw-bold mb-0">Calvin Placio</h5>
+                        <small class="text-body-secondary d-block">BSIT-Network Technology Track</small>
+                        <small class="text-body-secondary fw-semibold">Lead Developer, Code-Smart Solutions</small>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon custom-carousel-btn" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon custom-carousel-btn" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- CONTACT SECTION (rebuilt with different structure) -->
+    <!-- ======================================== -->
+    <section id="contact" class="py-5 bg-body-tertiary">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm p-4">
+                        <h2 class="fw-bold text-center mb-2">Get In Touch</h2>
+                        <p class="text-center text-body-secondary mb-4">Fill out the form below to send us a live message.</p>
+                        <form id="feedbackForm">
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label for="fname" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="fname" name="fname" required />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lname" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lname" name="lname" required />
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="emailAddr" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="emailAddr" name="emailAddr" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="userMessage" class="form-label">Message</label>
+                                <textarea class="form-control" id="userMessage" name="userMessage" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- FOOTER (rebuilt) -->
+    <!-- ======================================== -->
+    <footer class="py-4 border-top text-center bg-body">
+        <div class="container">
+            <p class="mb-0 text-body-secondary">&copy; 2026 Bootstrap5. Built for Web Development Laboratory.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ======================================== -->
+    <!-- THEME TOGGLE SCRIPT (rebuilt with different variable names) -->
+    <!-- ======================================== -->
+    <script>
+        (function() {
+            const toggleBtn = document.getElementById('themeSwitcher');
+            const iconElem = document.getElementById('themeIcon');
+            const rootElem = document.documentElement;
+
+            toggleBtn.addEventListener('click', function() {
+                const current = rootElem.getAttribute('data-bs-theme');
+                if (current === 'dark') {
+                    rootElem.setAttribute('data-bs-theme', 'light');
+                    iconElem.className = 'bi bi-moon-stars-fill';
+                } else {
+                    rootElem.setAttribute('data-bs-theme', 'dark');
+                    iconElem.className = 'bi bi-sun-fill';
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>
