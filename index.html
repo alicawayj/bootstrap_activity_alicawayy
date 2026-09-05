@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css" />
 
     <style>
-        /* === HERO BACKGROUND - ibang variable name === */
+        /* === HERO BACKGROUND === */
         .hero-bg {
             padding: 4rem 0;
             background: #0d6efd;
         }
 
-        /* === FEATURE ICON - ibang class name === */
+        /* === FEATURE ICON === */
         .icon-box {
             width: 3.5rem;
             height: 3.5rem;
@@ -26,7 +26,7 @@
             font-size: 1.75rem;
         }
 
-        /* === PRICING CARD - ibang transition === */
+        /* === PRICING CARD === */
         .price-card {
             transition: transform 0.25s ease-in-out;
         }
@@ -34,7 +34,7 @@
             transform: translateY(-5px);
         }
 
-        /* === CAROUSEL BUTTON - ibang approach === */
+        /* === CAROUSEL BUTTON === */
         .carousel-btn-dark {
             background-color: #212529 !important;
             border-radius: 999px !important;
@@ -49,7 +49,7 @@
 <body>
 
     <!-- ======================================== -->
-    <!-- NAVIGATION - ibang ID ng toggle -->
+    <!-- NAVIGATION - BINAGO ANG BUTTON SA TAAS -->
     <!-- ======================================== -->
     <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
         <div class="container">
@@ -67,9 +67,12 @@
                     <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <button class="btn btn-outline-secondary btn-sm" id="themeToggler">
+                        <!-- 👇 ITO ANG BINAGO - BUTTON LANG SA TAAS -->
+                        <button class="btn btn-outline-primary btn-sm" id="themeToggler">
                             <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                            <span class="d-none d-sm-inline ms-1">Theme</span>
                         </button>
+                        <!-- 👆 DATING: btn-outline-secondary, walang text -->
                     </li>
                 </ul>
             </div>
@@ -77,7 +80,7 @@
     </nav>
 
     <!-- ======================================== -->
-    <!-- HERO - ibang istruktura ng badge at buttons -->
+    <!-- HERO SECTION -->
     <!-- ======================================== -->
     <header id="home" class="hero-bg text-center text-white">
         <div class="container py-4">
@@ -98,7 +101,7 @@
     </header>
 
     <!-- ======================================== -->
-    <!-- FEATURES - ibang class names sa cards -->
+    <!-- FEATURES SECTION -->
     <!-- ======================================== -->
     <section id="features" class="py-5">
         <div class="container py-4">
@@ -107,7 +110,6 @@
                 <p class="text-body-secondary">Designed to give you full control over your layout and functionality.</p>
             </div>
             <div class="row g-4">
-                <!-- Feature 1 -->
                 <div class="col-md-4">
                     <div class="card h-100 p-4 border-0 shadow-sm text-center">
                         <span class="icon-box bg-primary text-white mx-auto mb-3">
@@ -117,7 +119,6 @@
                         <p class="text-body-secondary">Built-in theme switcher using Bootstrap 5's native data-bs-theme attribute.</p>
                     </div>
                 </div>
-                <!-- Feature 2 -->
                 <div class="col-md-4">
                     <div class="card h-100 p-4 border-0 shadow-sm text-center">
                         <span class="icon-box bg-success text-white mx-auto mb-3">
@@ -127,7 +128,6 @@
                         <p class="text-body-secondary">Fully fluid layout engineered to scale down seamlessly to mobile screens.</p>
                     </div>
                 </div>
-                <!-- Feature 3 -->
                 <div class="col-md-4">
                     <div class="card h-100 p-4 border-0 shadow-sm text-center">
                         <span class="icon-box bg-warning text-white mx-auto mb-3">
@@ -142,7 +142,7 @@
     </section>
 
     <!-- ======================================== -->
-    <!-- PRICING - ibang structure ng pricing display -->
+    <!-- PRICING SECTION -->
     <!-- ======================================== -->
     <section id="pricing" class="py-5 bg-body-tertiary">
         <div class="container py-4">
@@ -151,7 +151,6 @@
                 <p class="text-body-secondary">Choose the plan that fits your business needs.</p>
             </div>
             <div class="row g-4 justify-content-center">
-                <!-- Starter -->
                 <div class="col-md-4">
                     <div class="card price-card h-100 border-0 shadow-sm">
                         <div class="card-body p-4 d-flex flex-column">
@@ -169,7 +168,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Pro -->
                 <div class="col-md-4">
                     <div class="card price-card h-100 border-primary shadow position-relative">
                         <span class="badge bg-primary position-absolute top-0 start-50 translate-middle px-3 py-2 rounded-pill">Most Popular</span>
@@ -188,7 +186,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Enterprise -->
                 <div class="col-md-4">
                     <div class="card price-card h-100 border-0 shadow-sm">
                         <div class="card-body p-4 d-flex flex-column">
@@ -211,7 +208,7 @@
     </section>
 
     <!-- ======================================== -->
-    <!-- TESTIMONIALS - ibang carousel ID at ibang button style -->
+    <!-- TESTIMONIALS SECTION -->
     <!-- ======================================== -->
     <section id="testimonials" class="py-5">
         <div class="container py-4">
@@ -247,7 +244,7 @@
     </section>
 
     <!-- ======================================== -->
-    <!-- CONTACT - ibang ID ng form at inputs -->
+    <!-- CONTACT SECTION -->
     <!-- ======================================== -->
     <section id="contact" class="py-5 bg-body-tertiary">
         <div class="container py-4">
@@ -284,7 +281,7 @@
     </section>
 
     <!-- ======================================== -->
-    <!-- FOOTER - may kaunting pagbabago sa text -->
+    <!-- FOOTER -->
     <!-- ======================================== -->
     <footer class="py-4 border-top text-center bg-body">
         <div class="container">
@@ -296,7 +293,7 @@
     <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
 
     <!-- ======================================== -->
-    <!-- THEME TOGGLE - ibang variable names at structure -->
+    <!-- THEME TOGGLE SCRIPT -->
     <!-- ======================================== -->
     <script>
         (function() {
